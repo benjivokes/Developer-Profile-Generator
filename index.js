@@ -5,10 +5,12 @@ function getUserInput() {
         {
             type: 'input',
             message: 'Enter github username',
+            name:'username',
         },
         {
             type: 'list',
             message: 'What is you favorite color?',
+            name: 'color',
             choices: [
                 {
                     name: '70s poop yellow',
