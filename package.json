@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/benjivokes/Developer-Profile-Generator/issues"
   },
-  "homepage": "https://github.com/benjivokes/Developer-Profile-Generator#readme"
+  "homepage": "https://github.com/benjivokes/Developer-Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^7.0.2"
+  }
 }
