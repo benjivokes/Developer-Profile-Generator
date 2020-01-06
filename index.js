@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 
 function getUserInput() {
-    inquirer.prompt([
+    return inquirer.prompt([
         {
             type: 'input',
             message: 'Enter github username',
@@ -26,3 +26,10 @@ function getUserInput() {
         }
     ])
 }
+
+async function main() {
+const response = await getUserInput();
+console.log(response);
+}
+
+main();
