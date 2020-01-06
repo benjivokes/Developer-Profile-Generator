@@ -1,10 +1,12 @@
 const inquirer = require('inquirer');
 
+const { gen } = require('./HTML');
+
 function getUserInput() {
     return inquirer.prompt([
         {
             type: 'input',
-            message: 'Enter github username',
+            message: 'Enter Github Username',
             name:'username',
         },
         {
@@ -30,8 +32,8 @@ function getUserInput() {
 }
 
 async function main() {
-const response = await getUserInput();
-console.log(response);
+const { username, color } = await getUserInput();
+gen(username, color);
 }
 
 main();
