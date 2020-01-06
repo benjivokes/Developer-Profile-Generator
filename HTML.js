@@ -1,4 +1,13 @@
-const gen = function(username, color) {
+const fs = require('fs');
+const util = require('util');
+
+const writeFilePromise = util.promisify(fs.writeFile);
+
+const generateFileName = function() {
+    return `${(new Date).getTime()}.html`;
+}
+
+const gen = async function(username, color) {
     const htmlString = `
         <!DOCTYPE html>
         <html lang="en">
@@ -14,6 +23,7 @@ const gen = function(username, color) {
         </html>
     `;
 
+    await writeFilePromise(generateFileName, htmlString);
 }
 
 module.exports = {
