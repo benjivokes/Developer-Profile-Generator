@@ -1,16 +1,28 @@
-const inquirer = require("inquirer");
-const fs = require("fs");
-const axios = require("axios");
+const inquirer = require('inquirer');
 
-const questions = [
-    {
-        type: "input",
-        message: "What is your GitHub user name?",
-        name: "username"
-    },
-    {
-        type: "input",
-        message: "What is your favorite color?",
-        name: "color"
-    }
-]
+function getUserInput() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            message: 'Enter github username',
+        },
+        {
+            type: 'list',
+            message: 'What is you favorite color?',
+            choices: [
+                {
+                    name: '70s poop yellow',
+                    value: '70s poop yellow'
+                },
+                {
+                    name: 'Blue',
+                    value: 'blue'
+                },
+                {
+                    name: 'Pepto Pink',
+                    value: 'pink'
+                },
+            ]
+        }
+    ])
+}
